@@ -5,8 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascripts/index.js"></script>
 </head>
 <body>
-    <script src="javascripts/index.js"></script>
+    <div id=header>
+        <h1>Welcome to National Park Picker</h1>
+    </div>
+    <div id='headerPhoto'>
+        <img src="images/Header Background.jpeg" alt="headerPhoto">
+    </div>
+    <div>
+        <h2>Where have you been?</h2>
+    </div>
+
+    <div id="map"></div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxDHgudukAEO6mdJwMh6gPwuPIMNmUJOs&callback=initMap"
+    type="text/javascript"></script>
+    <h2>Tell us about your trip!</h2>
+    <form id="commentField">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="commentName">
+        </div>
+        <br>
+        <div>
+            <label for="date">Date:</label>
+            <input type="datetime-local" name="date" id="commentDate">
+        </div>
+        <br>
+        <div>
+            <label for="comment">Comment:</label> <br>
+            <textarea name="comment" id="commentComment" cols="100" rows="20"></textarea>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Add Your Comment">
+        </div>
+        <br>
+        <hr>
+        <div>
+            <h2>Comments</h2>
+        </div>
+    </form>
 </body>
 </html>
